@@ -1,0 +1,363 @@
+/*
+ * 1 - Header
+ * 2 - Main
+ * 3 - Filtres - Formulaire
+ * 4 - Filtres - Bouton
+ * 5 - Filtres - Informations
+ * 6 - Hébergements
+ */
+ body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+li,
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* Header */
+.entete_de_page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.entete__logo {
+    width: 180px;
+}
+
+.entete__nav_items {
+    display: inline-block;
+}
+
+.entete__nav_link {
+    display: inline-block;
+    padding: 50px 0;
+    width: 162px;
+    border-top: #fff solid 2px;
+    transition: 0.5s;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.entete__nav_link:hover {
+    border-top: #0065FC solid 2px;
+    color: #0065FC;
+}
+
+/* Main */
+.corps_de_page {
+    margin: auto;
+    width: calc(100% - 100px);
+}
+
+/* Filtres - Formulaire */
+.filtres__form_input {
+    border: #f2f2f2 solid 2px;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+}
+
+.filtres__form_input * {
+    margin: 0;
+}
+
+.filtres__form_input .map_icon {
+    background: #f2f2f2;
+    padding: 10px 15px;
+}
+
+.filtres__form_input input {
+    border: none;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+.filtres__form_input button {
+    background: #0065FC;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: scale(1.05);
+    border-radius: 0 10px 10px 0;
+}
+
+.filtres__form_input button * {
+    transform: scale(0.95);
+}
+
+.filtres__form_input button i {
+    display: none;
+}
+
+/* Filtres - Bouton */
+.filtres__button {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filtres__button_title {
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.filtres__button_liste {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filtres__button_items {
+    border-radius: 30px;
+    border: #d9d9d9 solid 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.filtres__button_items:last-child {
+    margin-right: 0;
+}
+
+.filtres__button_text {
+    padding: 0 20px 0 10px;
+    font-weight: 600;
+}
+
+.fas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtres__button_icons {
+    background: #DEEBFF;
+    color: #0065FC;
+    /* font-size: 12px; */
+    height: 50px;
+    width: 50px;
+    transform: scale(1.1);
+    border-radius: 30px;
+}
+
+/* Filtres - Informations */
+.filtres__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filtres__infos_icon {
+    border: #d9d9d9 1px solid;
+    border-radius: 20px;
+    color: #0065FC;
+    width: 25px;
+    height: 25px;
+    padding: 15px;
+    margin-right: 12px;
+}
+
+/* Hébergements */
+#hebergement {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.hebergement__loft,
+.hebergement__poploft {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 47px 40px;
+}
+
+/* Hébergement - A marseille */
+.hebergement__loft {
+    width: calc((2 * 100% / 3) - 40px);
+}
+
+.loft__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.loft_card {
+    width: 32%;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: #fff solid 5px;
+    margin-bottom: 30px;
+}
+
+.loft_card__img {
+    height: 115px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.loft_card__infos {
+    padding: 12px 17px;
+}
+
+.card_grade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #d9d9d9;
+}
+
+.active-star {
+    color: #0065FC;
+}
+
+/* Hébergement - Les plus populaires */
+.hebergement__poploft {
+    width: calc(100% / 3);
+}
+
+.loft__list {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .entete_de_page {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .entete__logo {
+        width: 100px;
+        padding-top: 10px;
+    }
+
+    .entete__nav {
+        width: 100%;
+    }
+
+    .entete__nav_list {
+        display: flex;
+    }
+
+    .entete__nav_items {
+        width: 50%;
+    }
+
+    .entete__nav_link {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .entete__nav_link:hover {
+        border-bottom: #0065FC solid 2px;
+        border-top: none;
+    }
+
+    /* Main */
+    .corps_de_page {
+        width: 100%;
+    }
+
+    /* Filtres */
+    .filtres {
+        margin: 25px auto;
+        width: calc(100% - 25px);
+    }
+
+    .filtres__form_input {
+        width: 100%;
+    }
+
+    .filtres__form_input input {
+        width: inherit;
+    }
+
+    .filtres__form_input button {
+        border-radius: 15px;
+    }
+
+    .filtres__form_input button i {
+        display: block;
+    }
+
+    .filtres__form_input button p {
+        display: none;
+    }
+
+    .filtres__button_items {
+        margin: 5px 5px 5px 0;
+    }
+
+    .filtres__button_items:last-child {
+        margin-right: 0;
+    }
+
+    .filtres__info {
+        align-items: flex-start;
+    }
+
+    /* Hébergement */
+    .hebergement__loft,
+    .hebergement__poploft {
+        width: 100%;
+        border-radius: 0;
+        padding: 25px auto;
+    }
+
+    .hebergement__loft{
+        background: #fff;
+    }
+
+    .loft_card{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .hebergement__poploft {
+        order: -1;
+    }
+}
