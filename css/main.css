@@ -1,10 +1,11 @@
 /*
- * 1 - Header
- * 2 - Main
+ * 1 - Page
+ * 2 - Header
  * 3 - Filtres - Formulaire
  * 4 - Filtres - Bouton
  * 5 - Filtres - Informations
  * 6 - Hébergements
+ * 7 - Activités
  */
 
 body {
@@ -37,13 +38,13 @@ p {
     margin-bottom: 0;
 }
 
-/* Page */
+/* 1 - Page */
 .page {
     width: 90%;
     margin: auto;
 }
 
-/* Header */
+/* 2 - Header */
 .entete_de_page {
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +76,7 @@ p {
     color: #0065fc;
 }
 
-/* Filtres - Formulaire */
+/* 4 - Filtres - Formulaire */
 .filtres__form_input {
     border: #f2f2f2 solid 2px;
     width: max-content;
@@ -120,7 +121,7 @@ p {
     display: none;
 }
 
-/* Filtres - Bouton */
+/* 4 - Filtres - Bouton */
 .filtres__button {
     padding: 30px 0;
     display: flex;
@@ -170,14 +171,13 @@ p {
 .filtres__button_icons {
     background: #deebff;
     color: #0065fc;
-    /* font-size: 12px; */
     height: 50px;
     width: 50px;
     transform: scale(1.1);
     border-radius: 30px;
 }
 
-/* Filtres - Informations */
+/* 5 - Filtres - Informations */
 .filtres__info {
     display: flex;
     justify-content: flex-start;
@@ -194,7 +194,7 @@ p {
     margin-right: 12px;
 }
 
-/* Hébergements */
+/* 6 - Hébergements */
 #hebergement {
     margin-top: 37px;
     display: flex;
@@ -210,36 +210,47 @@ p {
     padding: 47px 40px;
 }
 
-/* Hébergement - A marseille */
+/* 6.1 - Hébergement - A marseille */
 .hebergement__loft {
     width: calc((2 * 100% / 3) - 40px);
 }
 
-.loft__list {
+.loft__list,
+.poploft__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
 }
 
-.loft_card {
+.loft_card,
+.poploft_card {
     width: 32%;
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
     border: #fff solid 5px;
     margin-bottom: 30px;
-    box-shadow: 0 5px 5px rgba(78, 78, 78, 0.5);
+    box-shadow: 0 5px 10px rgba(78, 78, 78, 0.3);
 }
 
 .loft_card__img {
-    height: 115px;
+    height: 120px;
     object-fit: cover;
     object-position: center;
 }
 
 .loft_card__infos {
     padding: 12px 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    height: calc(100% - 115px);
+}
+
+.loft_card_article {
+    height: 100%;
 }
 
 .card_grade {
@@ -254,32 +265,157 @@ p {
     color: #0065fc;
 }
 
-.more_link{
+.more_link {
     font-weight: 700;
 }
 
-/* Hébergement - Les plus populaires */
+/* 6.2 - Hébergement - Les plus populaires */
 .hebergement__poploft {
     width: calc(100% / 3);
+}
+
+.pop_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .loft__list {
 }
 
-@media screen and (max-width: 992px) {
+.poploft_card {
+    width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+.poploft_card_article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.poploft_card__img {
+    height: 140px;
+    width: 35%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.poploft_card__infos {
+    width: 65%;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+/* 7 - Activités */
+.activites_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.activite_col {
+    width: 23%;
+    height: 445px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.activite_card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(78, 78, 78, 0.3);
+    width: 100%;
+}
+
+.activite_card img{
+    width: 100%;
+    height: calc(100% - 55px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.activite_card__article{
+    height: 100%;
+    width: 100%;
+}
+
+.activite_single {
+    height: 445px;
+}
+
+.activite_fort{
+    height: 235px;
+}
+
+.activite_ile{
+    height: 165px
+}
+
+.activite_notre_dame{
+    height: 195px;
+}
+
+.activite_longchamp{
+    height: 210px;
+}
+
+.activite-card__title {
+    min-height: 55px;
+    font-weight: 700;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 992px) {
     /* Main */
     .page {
         width: 100%;
     }
 
+    /* Filtres */
+    .filtres {
+        margin: 25px auto;
+        width: calc(100% - 25px);
+    }
+
+    /* Hébergement */
+    .hebergement__loft,
+    .hebergement__poploft {
+        width: 100%;
+        border-radius: 0;
+        padding: 25px auto;
+    }
+
+    .hebergement__loft {
+        background: #fff;
+    }
+
+    .hebergement__poploft {
+        order: -1;
+    }
+
+    .loft_card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
     /* Header */
     .entete_de_page {
         flex-direction: column;
         align-items: center;
-        padding: 0;
     }
 
     .entete__logo {
@@ -316,11 +452,6 @@ p {
     }
 
     /* Filtres */
-    .filtres {
-        margin: 25px auto;
-        width: calc(100% - 25px);
-    }
-
     .filtres__form_input {
         width: 100%;
     }
@@ -353,24 +484,12 @@ p {
         align-items: flex-start;
     }
 
-    /* Hébergement */
-    .hebergement__loft,
-    .hebergement__poploft {
-        width: 100%;
-        border-radius: 0;
-        padding: 25px auto;
-    }
-
-    .hebergement__loft {
-        background: #fff;
-    }
-
     .loft_card {
         width: 100%;
-        margin-bottom: 15px;
     }
 
-    .hebergement__poploft {
-        order: -1;
+    .loft_card,
+    .poploft_card {
+        margin-bottom: 15px;
     }
 }
