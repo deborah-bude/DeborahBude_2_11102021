@@ -6,6 +6,7 @@
  * 5 - Filtres - Informations
  * 6 - Hébergements
  * 7 - Activités
+ * 8 - Footer
  */
 
 body {
@@ -313,6 +314,10 @@ p {
 }
 
 /* 7 - Activités */
+#activites{
+    margin-bottom: 60px;
+}
+
 .activites_list {
     display: flex;
     flex-wrap: wrap;
@@ -376,6 +381,25 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+}
+
+/* 8 - Footer*/
+.pied_de_page{
+    width: 100%;
+    padding: 50px 10%;
+    background: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer_col {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 992px) {
