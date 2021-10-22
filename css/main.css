@@ -70,7 +70,7 @@ p {
     transition: 0.1s;
     font-size: 16px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .entete__nav_link:hover {
@@ -275,7 +275,7 @@ p {
 }
 
 .more_link {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* 6.2 - Hébergement - Les plus populaires */
@@ -288,7 +288,7 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .poploft_card {
@@ -382,7 +382,7 @@ p {
 
 .activite-card__title {
     min-height: 55px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
