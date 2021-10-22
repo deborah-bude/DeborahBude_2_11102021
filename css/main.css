@@ -247,16 +247,14 @@ p {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: space-between;
-    flex-direction: column;
+}
+
+.loft_card__infos > *, .poploft_card__infos > *{
+    width: 100%;
 }
 
 .loft_card__infos {
     padding: 12px 17px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-between;
-    flex-direction: column;
     height: calc(100% - 115px);
 }
 
@@ -307,6 +305,7 @@ p {
 
 .poploft_card__img {
     height: 100%;
+    max-height: 140px;
     width: 35%;
     object-fit: cover;
     object-position: center;
@@ -436,7 +435,8 @@ p {
     .filtres,
     .hebergement__loft,
     .hebergement__poploft,
-    #activites {
+    #activites,
+    .pied_de_page {
         width: 100%;
         border-radius: 0;
         padding: 25px;
@@ -471,8 +471,9 @@ p {
         order: 3;
     }
 
-    .poploft_card__img {
-        max-height: 140px;
+    /* Footer */
+    .footer_section{
+        width: 100%;
     }
 }
 
@@ -570,5 +571,15 @@ p {
 
     .activite_col:nth-child(3) {
         order: initial;
+    }
+
+    /* Footer */
+    .footer_col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer_col:last-child{
+        margin-bottom: 0
     }
 }
