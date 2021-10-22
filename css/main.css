@@ -42,6 +42,7 @@ p {
 /* 1 - Page */
 .page {
     width: 90%;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -197,7 +198,7 @@ p {
 
 /* 6 - Hébergements */
 #hebergement {
-    margin-top: 37px;
+    margin: 37px 0 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -241,12 +242,21 @@ p {
     object-position: center;
 }
 
+.loft_card__infos, .poploft_card__infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-direction: column;
+}
+
 .loft_card__infos {
     padding: 12px 17px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: space-between;
+    flex-direction: column;
     height: calc(100% - 115px);
 }
 
@@ -280,9 +290,7 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.loft__list {
+    font-weight: 700;
 }
 
 .poploft_card {
@@ -298,7 +306,7 @@ p {
 }
 
 .poploft_card__img {
-    height: 140px;
+    height: 100%;
     width: 35%;
     object-fit: cover;
     object-position: center;
@@ -314,7 +322,7 @@ p {
 }
 
 /* 7 - Activités */
-#activites{
+#activites {
     margin-bottom: 60px;
 }
 
@@ -341,14 +349,14 @@ p {
     width: 100%;
 }
 
-.activite_card img{
+.activite_card img {
     width: 100%;
     height: calc(100% - 55px);
     object-fit: cover;
     object-position: center;
 }
 
-.activite_card__article{
+.activite_card__article {
     height: 100%;
     width: 100%;
 }
@@ -357,19 +365,19 @@ p {
     height: 445px;
 }
 
-.activite_fort{
+.activite_fort {
     height: 235px;
 }
 
-.activite_ile{
-    height: 165px
+.activite_ile {
+    height: 165px;
 }
 
-.activite_notre_dame{
+.activite_notre_dame {
     height: 195px;
 }
 
-.activite_longchamp{
+.activite_longchamp {
     height: 210px;
 }
 
@@ -384,15 +392,22 @@ p {
 }
 
 /* 8 - Footer*/
-.pied_de_page{
+.pied_de_page {
     width: 100%;
-    padding: 50px 10%;
     background: #f2f2f2;
+    padding: 50px 0;
+}
+
+.footer_section {
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
 }
+
 .footer_col {
     width: 30%;
     display: flex;
@@ -409,17 +424,22 @@ p {
     }
 
     /* Filtres */
-    .filtres {
-        margin: 25px auto;
-        width: calc(100% - 25px);
+    .filtres__button_items {
+        margin: 5px 5px 5px 0;
     }
 
     /* Hébergement */
+    #hebergement, #activites {
+        margin-bottom: 0;
+    }
+
+    .filtres,
     .hebergement__loft,
-    .hebergement__poploft {
+    .hebergement__poploft,
+    #activites {
         width: 100%;
         border-radius: 0;
-        padding: 25px auto;
+        padding: 25px;
     }
 
     .hebergement__loft {
@@ -431,7 +451,28 @@ p {
     }
 
     .loft_card {
-        width: 45%;
+        width: 48%;
+    }
+
+    /* Activités */
+    .activite_col {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .activite_fort,
+    .activite_ile,
+    .activite_notre_dame,
+    .activite_longchamp {
+        height: 48%;
+    }
+
+    .activite_col:nth-child(3) {
+        order: 3;
+    }
+
+    .poploft_card__img {
+        max-height: 140px;
     }
 }
 
@@ -463,6 +504,7 @@ p {
         width: 100%;
         padding: 15px 0;
         border-top: none;
+        border-bottom: #f2f2f2 solid 2px;
     }
 
     .entete__nav_link:hover {
@@ -492,12 +534,8 @@ p {
         display: block;
     }
 
-    .filtres__form_input button p {
+    .filtres__form_input button span {
         display: none;
-    }
-
-    .filtres__button_items {
-        margin: 5px 5px 5px 0;
     }
 
     .filtres__button_items:last-child {
@@ -508,6 +546,7 @@ p {
         align-items: flex-start;
     }
 
+    /* Hébergements */
     .loft_card {
         width: 100%;
     }
@@ -515,5 +554,21 @@ p {
     .loft_card,
     .poploft_card {
         margin-bottom: 15px;
+    }
+
+    /* Activités */
+    .activite_col {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .activite_card {
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .activite_col:nth-child(3) {
+        order: initial;
     }
 }
