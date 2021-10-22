@@ -6,7 +6,8 @@
  * 5 - Filtres - Informations
  * 6 - Hébergements
  */
- body {
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -36,17 +37,22 @@ p {
     margin-bottom: 0;
 }
 
+/* Page */
+.page {
+    width: 90%;
+    margin: auto;
+}
+
 /* Header */
 .entete_de_page {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
 }
 
 .entete__logo {
-    width: 180px;
+    max-width: 180px;
 }
 
 .entete__nav_items {
@@ -58,21 +64,15 @@ p {
     padding: 50px 0;
     width: 162px;
     border-top: #fff solid 2px;
-    transition: 0.5s;
+    transition: 0.1s;
     font-size: 16px;
     text-align: center;
     font-weight: 500;
 }
 
 .entete__nav_link:hover {
-    border-top: #0065FC solid 2px;
-    color: #0065FC;
-}
-
-/* Main */
-.corps_de_page {
-    margin: auto;
-    width: calc(100% - 100px);
+    border-top: #0065fc solid 2px;
+    color: #0065fc;
 }
 
 /* Filtres - Formulaire */
@@ -91,6 +91,8 @@ p {
 .filtres__form_input .map_icon {
     background: #f2f2f2;
     padding: 10px 15px;
+    display: inherit;
+    border-radius: 10px 0 0 10px;
 }
 
 .filtres__form_input input {
@@ -100,7 +102,7 @@ p {
 }
 
 .filtres__form_input button {
-    background: #0065FC;
+    background: #0065fc;
     border: none;
     color: white;
     padding: 10px 15px;
@@ -166,8 +168,8 @@ p {
 }
 
 .filtres__button_icons {
-    background: #DEEBFF;
-    color: #0065FC;
+    background: #deebff;
+    color: #0065fc;
     /* font-size: 12px; */
     height: 50px;
     width: 50px;
@@ -185,7 +187,7 @@ p {
 .filtres__infos_icon {
     border: #d9d9d9 1px solid;
     border-radius: 20px;
-    color: #0065FC;
+    color: #0065fc;
     width: 25px;
     height: 25px;
     padding: 15px;
@@ -227,6 +229,7 @@ p {
     overflow: hidden;
     border: #fff solid 5px;
     margin-bottom: 30px;
+    box-shadow: 0 5px 5px rgba(78, 78, 78, 0.5);
 }
 
 .loft_card__img {
@@ -248,7 +251,11 @@ p {
 }
 
 .active-star {
-    color: #0065FC;
+    color: #0065fc;
+}
+
+.more_link{
+    font-weight: 700;
 }
 
 /* Hébergement - Les plus populaires */
@@ -263,6 +270,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+    /* Main */
+    .page {
+        width: 100%;
+    }
+
     /* Header */
     .entete_de_page {
         flex-direction: column;
@@ -290,10 +302,11 @@ p {
     .entete__nav_link {
         width: 100%;
         padding: 15px 0;
+        border-top: none;
     }
 
     .entete__nav_link:hover {
-        border-bottom: #0065FC solid 2px;
+        border-bottom: #0065fc solid 2px;
         border-top: none;
     }
 
@@ -348,13 +361,13 @@ p {
         padding: 25px auto;
     }
 
-    .hebergement__loft{
+    .hebergement__loft {
         background: #fff;
     }
 
-    .loft_card{
+    .loft_card {
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 
     .hebergement__poploft {
