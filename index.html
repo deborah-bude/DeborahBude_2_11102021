@@ -19,11 +19,11 @@
 <body>
     <div class="page">
         <header class="entete_de_page">
-            <img class="entete__logo" src="./assets/img/logo/Booki@3x.png" alt="Logo Booki bleu">
+            <img aria-label="logo" class="entete__logo" src="./assets/img/logo/Booki@3x.png" alt="Logo Booki bleu">
             <nav class="entete__nav">
                 <ul class="entete__nav_list">
                     <li class="entete__nav_items active">
-                        <a class="entete__nav_link" href="#hebergements">Hébergements</a>
+                        <a class="entete__nav_link" href="#hebergement">Hébergements</a>
                     </li>
                     <li class="entete__nav_items">
                         <a class="entete__nav_link" href="#activites">Activités</a>
@@ -36,9 +36,9 @@
             <section class="filtres">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <form class="filtres__form" action="get">
+                <form class="filtres__form" action="#" method="get">
                     <div class="filtres__form_input">
-                        <label class="map_icon" for="ville">
+                        <label class="map_icon" for="ville" aria-label="Localiser ma ville">
                             <i class="fas fa-map-marker-alt"></i>
                         </label>
                         <input type="text" name="ville" id="ville" placeholder="Ville, pays">
@@ -51,7 +51,7 @@
 
                 <div class="filtres__button">
                     <p class="filtres__button_title">Filtres</p>
-                    <ul class="filtres__button_liste">
+                    <ul class="filtres__button_list">
                         <li class="filtres__button_items">
                             <i class="filtres__button_icons fas fa-money-bill-wave"></i>
                             <p class="filtres__button_text">Économique</p>
